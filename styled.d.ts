@@ -1,14 +1,19 @@
-import "styled-components";
+import 'styled-components';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       primary: string;
       background: string;
       onBackground: string;
+      text: string;
       offWhite: string;
       fade: string;
-      extraFaded: string;
+      fadeLight: string;
+    };
+
+    fonts: {
+      main: any;
     };
 
     measurements: {

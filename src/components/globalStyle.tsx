@@ -1,19 +1,46 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+ @font-face {
+   font-family: 'Atlas Grotesk';
+   src: local('Atlas Grotesk') url(../public/fonts/AtlasGrotesk.otf) format('truetype');
+ }
+
   * {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+    scroll-behaviour: smooth;
+    font-family:  ${({ theme }) => theme.fonts.main};
+  }
+
+  body { 
+      background-color: ${({ theme }) => theme.colors.background};
+      margin: 0;
+      padding: 0;
+      color: white;
+      min-height: 100%;
+    }
+
+  h1 {
+    font-style: italic;
+    margin: 10px 0 10px 0;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #D0D0D0;
+    margin: 10px 0 10px 0;
+    transition:  width 0.5s;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 
