@@ -5,9 +5,12 @@ import Image from 'next/image';
 import Content from '@/components/Content';
 import { useState } from 'react';
 import Accordion from '@/components/Accordion';
+import { useTheme } from 'styled-components';
 
 export default function Home() {
+  const theme = useTheme();
   const [tab, setTab] = useState('index');
+
   return (
     <>
       <Head>
@@ -24,8 +27,6 @@ export default function Home() {
             fill
             style={{
               zIndex: 1,
-              // objectFit: 'contain',
-              // top: 30,
               transform: 'scale(1.01)',
             }}
           />
@@ -37,8 +38,11 @@ export default function Home() {
           />
         </div>
         <div className='h-1/2 '>
-          <p className='p-6  '>
-            Frontend Developer - UX/UI Designer - Artist - Music Producer
+          <p
+            className='pb-4 pl-6 pr-6 text-center'
+            style={theme.fonts.trispaced.style}
+          >
+            Frontend Developer / UX/UI Designer / Artist / Music Producer
           </p>
           <Accordion />
         </div>

@@ -14,6 +14,7 @@ declare module 'styled-components' {
 
     fonts: {
       main: any;
+      trispaced: any;
     };
 
     measurements: {
